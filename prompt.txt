@@ -1,0 +1,41 @@
+PROMPT 1
+Design and implement a menu-driven 2D Graphics Editor in C using a 2D character array as the drawing canvas. The canvas should initially be filled with the character '_' (underscore), and graphical objects should be drawn using the character '*' (asterisk).
+The editor should support:
+1. Drawing a line
+2. Drawing a rectangle
+3. Drawing a triangle
+4. Drawing a circle
+5. Adding objects to the picture
+6. Deleting objects from the picture
+7. Modifying objects in the picture
+8. Displaying the picture
+Use a 2D character array to store the picture and write separate functions for each operation.
+
+RESPONSE:
+Generated a complete menu-driven C program implementing line, rectangle, triangle, and circle drawing along with add, delete, modify, and display operations.
+
+PROMPT 2
+The generated graphics editor is working. Modify the program so that all graphical objects are automatically drawn at the center of the canvas instead of requiring the user to enter coordinates. The user should only enter dimensions such as radius, length, width, height, or size.
+
+RESPONSE:
+Updated the object creation logic to calculate the center of the canvas and automatically place all shapes around the center.
+
+PROMPT 3
+In the graphics editor, deleting an object removes portions of overlapping shapes because the object is erased by drawing underscores. Suggest a better implementation that preserves remaining objects when one object is deleted.
+
+RESPONSE:
+Suggested storing all objects in an array, removing the selected object, clearing the canvas, and redrawing all remaining objects to preserve overlapping shapes.
+
+PROMPT 4
+Modify the delete and modify operations so that the entire canvas is redrawn whenever an object is deleted or modified. Ensure that overlapping objects remain intact after these operations.
+
+RESPONSE:
+Provided updated implementations of deleteObject() and modifyObject() that rebuild the canvas by redrawing all existing objects.
+
+PROMPT 5
+Explain the algorithms used in the graphics editor for drawing lines and circles. Also explain how the 2D character array is used as a drawing canvas.
+
+RESPONSE:
+Explained the Bresenham Line Drawing Algorithm, Midpoint Circle Algorithm, and the use of a 2D character array for representing the drawing area.
+
+
